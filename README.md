@@ -40,6 +40,8 @@ The thought process is described as follows
 16.	fBodyGyroMag
 17.	fBodyGyroJerkMag
 
+### The variables that are followed with -XYZ are repeated three times, once for each dimension
+
 
 # The strategy of the program is as follows:
 1.	Read in the features file and create a vector with variable names that make sense
