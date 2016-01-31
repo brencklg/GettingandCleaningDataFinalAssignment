@@ -54,7 +54,7 @@ The thought process is described as follows
 8.	Merge the Test and Train datasets with the text names for activities
 8.	Merge the Test and Train datafrmes together to create a single datframe
 9.	Drop the ActivityCode variable as it is redundant with the Activity Name variable.  I can always put it back later if I need it.
-10.	I now have a single dataframe, “finalSet”  with 10,299 observations and 69 variables
+10.	I now have a single dataframe, “finalSet”  with 10,299 observations and 68 variables
 a.	SubjectCode and ActivityName
 b.	66 variables coinciding with the mean and std measurements
 11.	Create another dataframe, “summarySet” that provides averages of the mean and std measurements grouped by subject and activity.  
