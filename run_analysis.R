@@ -60,9 +60,9 @@ colnames(activityLabels) <- c("ActivityCode", "ActivityName")
 # -- merge the yTest and yTrain files with the test descriptions of the activity
 # -- then bind the the test and train dataset - adding the Activity Code and Activity Name as a variable
 colnames(yTest) <- c("ActivityCode")
-yTest <- merge (yTest, activityLabels, by.x="ActivityCode", sort=FALSE)
+#yTest <- merge (yTest, activityLabels, by.x="ActivityCode", sort=FALSE)
 colnames(yTrain) <- c("ActivityCode")
-yTrain <- merge (yTrain, activityLabels, by.x="ActivityCode", sort= FALSE)
+#yTrain <- merge (yTrain, activityLabels, by.x="ActivityCode", sort= FALSE)
 
 testSet <- cbind(yTest, testSet)
 trainSet <- cbind(yTrain, trainSet)
@@ -70,6 +70,7 @@ trainSet <- cbind(yTrain, trainSet)
 # Read in the test and train subject files 
 # -- They contain one variable, the subject number for each observation
 # -- label the variable SubjectCode and add as a variable to the test and train datasets
+
 testSubjects <- read.table( file="./test/subject_test.txt")
 trainSubjects <- read.table( file="./train/subject_train.txt")
 colnames(testSubjects) <- c("SubjectCode")
@@ -77,6 +78,8 @@ colnames(trainSubjects) <- c("SubjectCode")
 testSet <- cbind(testSubjects, testSet)
 trainSet <- cbind(trainSubjects, trainSet)
 
+testSet<- merge (testSet, activityLabels, by.x="ActivityCode", sort=FALSE)
+trainSet <- merge (trainSet, activityLabels, by.x="ActivityCode", sort= FALSE)
 # Finally.....
 # Merge the test data and the train data together  creating one final set with 
 # -- 69 variables and 10,299 observations
