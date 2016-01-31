@@ -49,15 +49,16 @@ The thought process is described as follows
 3.	Add the variable names to the columns and delete the columns we don’t want
 4.	Read in the text names for the activities the go with the Activity Code
 5.	Add the character names to the “y” files that have Activity Code in them
-6.	Add the Activity Code and Activity Name to the Test and Train dataframes
+6.	Add the Activity Code to the Test and Train dataframes
 7.	Read in the subject files and add the subject code to the Test and Train dataframes
+8.	Merge the Test and Train datasets with the text names for activities
 8.	Merge the Test and Train datafrmes together to create a single datframe
 9.	Drop the ActivityCode variable as it is redundant with the Activity Name variable.  I can always put it back later if I need it.
 10.	I now have a single dataframe, “finalSet”  with 10,299 observations and 69 variables
 a.	SubjectCode and ActivityName
 b.	66 variables coinciding with the mean and std measurements
 11.	Create another dataframe, “summarySet” that provides averages of the mean and std measurements grouped by subject and activity.  
-a.	This data set has 40 observations of the 68 variables
+a.	This data set has 180 observations of the 68 variables
 i.	SubjectCode and ActivityName
 ii.	The average for each of the 66 mean and std variables
 
